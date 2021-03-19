@@ -1,14 +1,14 @@
-require_relative 'lib/twitch/jekyll/version'
+require_relative 'lib/jekyll-twitch/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-twitch"
-  spec.version       = JekyllTwitch::VERSION
+  spec.version       = Jekyll::Twitch::VERSION
   spec.authors       = ["Rachael Wright-Munn"]
   spec.email         = ["chaelcodes@gmail.com"]
 
   spec.summary       = %q{Embed Twitch clips, VODs, and broadcasts in your Jekyll sites.}
   spec.description   = %q{A gem that creates a TwitchTag liquid tag that allows Jekyll sites to render Twitch clips, VODs, and broadcasts.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/ChaelCodes/jekyll-twitch"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+  spec.add_dependency 'jekyll'
 end
