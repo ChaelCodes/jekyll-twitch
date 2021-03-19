@@ -1,6 +1,4 @@
 require "jekyll"
-require "jekyll-twitch/version"
-require "pry"
 
 module Jekyll
   class TwitchTag < Liquid::Tag
