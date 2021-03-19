@@ -1,5 +1,6 @@
 require "bundler/setup"
-require "twitch-tag"
+require "twitch_tag"
+require "jekyll"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
