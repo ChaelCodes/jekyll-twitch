@@ -1,6 +1,10 @@
-require "jekyll"
+# frozen_string_literal: true
 
+require 'jekyll'
+
+# Jekyll Module contains everything Jekyll
 module Jekyll
+  # Twitch Tag allows you to use twitch as a liquid tag, currently embeds clips
   class TwitchTag < Liquid::Tag
     def initialize(_tag_name, content, _tokens)
       super
@@ -9,7 +13,7 @@ module Jekyll
 
     def render(context)
       host = Jekyll::TwitchTag.site_host context
-      %Q(<iframe
+      %(<iframe
         src="#{@parsed_url}&parent=#{host}"
         height="720"
         width="1280"

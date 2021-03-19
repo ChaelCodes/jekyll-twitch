@@ -1,0 +1,14 @@
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.4
+  NewCops: enable
+
+RSpec/ImplicitSubject:
+  Enabled: false
+
+Naming/FileName:
+  Exclude:
+    - lib/jekyll-twitch.rb
