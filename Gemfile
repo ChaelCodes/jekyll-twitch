@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in twitch-jekyll.gemspec
+# Specify your gem's dependencies in jekyll-twitch.gemspec
 gemspec
 
 gem "rake", "~> 12.0"
