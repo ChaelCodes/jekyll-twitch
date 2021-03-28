@@ -8,7 +8,7 @@ module Jekyll
     end
 
     def render(context)
-      host = Jekyll::TwitchTag.site_host context
+      host = Jekyll::TwitchTag.site_url context
       %Q(<iframe
         src="#{@parsed_url}&parent=#{host}"
         height="720"
@@ -27,8 +27,8 @@ module Jekyll
       end
     end
 
-    def self.site_host(context)
-      context.registers[:site].config['host']
+    def self.site_url(context)
+      context.registers[:site].config['url']
     end
   end
 

@@ -18,7 +18,7 @@ RSpec.describe Jekyll::TwitchTag do
   describe '#render' do
     subject { Jekyll::TwitchTag }
     before do
-      allow(Jekyll::TwitchTag).to receive(:site_host).and_return("test")
+      allow(Jekyll::TwitchTag).to receive(:site_url).and_return("test")
     end
 
     it "renders a twitch embed" do
