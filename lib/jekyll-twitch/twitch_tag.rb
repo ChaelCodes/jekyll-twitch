@@ -18,6 +18,11 @@ module Jekyll
     end
 
     # Class Methods
+    def self.hostname(url)
+      matches = url.match %r{\A(https?://)?(?<host>[A-z.]+)(:\d+)?}
+      matches[:host]
+    end
+
     def self.parse_twitch_url(url)
       url = url.strip
       case url
@@ -28,7 +33,7 @@ module Jekyll
     end
 
     def self.site_url(context)
-      context.registers[:site].config['url']
+      self.hostname(context.registers[:site].config['url'])
     end
   end
 
