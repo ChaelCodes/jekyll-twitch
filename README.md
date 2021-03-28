@@ -1,8 +1,8 @@
-# Twitch::Jekyll
+# Jekyll::Twitch
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/twitch/jekyll`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem allows you to embed twitch clips in your Jekyll websites. It adds and registers a new twitch liquid tag that accepts a twitch clip url.
 
-TODO: Delete this and the text above, and describe your gem
+`{% twitch https://www.twitch.tv/chaelcodes/clip/SpoopySlipperyGrasshopperPogChamp %}`
 
 ## Installation
 
@@ -20,9 +20,19 @@ Or install it yourself as:
 
     $ gem install jekyll-twitch
 
+Then add Jekyll-Twitch to your `_config.yml` like so:
+```
+plugins:
+  - jekyll-twitch
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+When building your site, Jekyll no longer substitutes `site.url` for localhost, which means Twitch embeds will not render. You need to supply host and localhost to view clips in development. `jekyll serve --host localhost --port 4000`
+
+This is a Jekyll liquid tag, so just put `{% twitch  https://www.twitch.tv/chaelcodes/clip/SpoopySlipperyGrasshopperPogChamp %}` to embed your clip.
+
+We intend to support broadcasts and videos soon.
 
 ## Development
 
@@ -32,7 +42,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/ChaelCodes/jekyll-twitch. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/ChaelCodes/jekyll-twitch/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/ChaelCodes/jekyll-twitch. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/ChaelCodes/jekyll-twitch/blob/main/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -41,4 +51,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Twitch::Jekyll project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ChaelCodes/jekyll-twitch/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Jekyll::Twitch project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ChaelCodes/jekyll-twitch/blob/main/CODE_OF_CONDUCT.md).
