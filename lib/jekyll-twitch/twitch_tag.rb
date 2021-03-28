@@ -8,7 +8,7 @@ module Jekyll
     end
 
     def render(context)
-      host = Jekyll::TwitchTag.site_host context
+      host = Jekyll::TwitchTag.site_url context
       %Q(<iframe
         src="#{@parsed_url}&parent=#{host}"
         height="720"
@@ -18,6 +18,11 @@ module Jekyll
     end
 
     # Class Methods
+    def self.hostname(url)
+      matches = url.match %r{\A(https?://)?(?<host>[A-z.]+)(:\d+)?}
+      matches[:host]
+    end
+
     def self.parse_twitch_url(url)
       url = url.strip
       case url
@@ -27,8 +32,8 @@ module Jekyll
       end
     end
 
-    def self.site_host(context)
-      context.registers[:site].config['host']
+    def self.site_url(context)
+      self.hostname(context.registers[:site].config['url'])
     end
   end
 

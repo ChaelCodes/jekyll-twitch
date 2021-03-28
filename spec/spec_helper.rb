@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "twitch_tag"
+require "jekyll-twitch"
 require "jekyll"
 
 RSpec.configure do |config|

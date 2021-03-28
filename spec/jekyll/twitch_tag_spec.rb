@@ -5,6 +5,34 @@ RSpec.describe Jekyll::TwitchTag do
     expect(Jekyll::Twitch::VERSION).not_to be nil
   end
 
+  describe '.hostname' do
+    subject { described_class.hostname(url) }
+
+    context 'with development' do
+      let(:url) { "localhost:4000" }
+
+      it { is_expected.to eq 'localhost' }
+
+      context 'with base url' do
+        let(:url) { "https://localhost:4000/base" }
+
+        it { is_expected.to eq 'localhost' }
+      end
+    end
+
+    context 'with production' do
+      let(:url) { "https://chael.codes" }
+
+      it { is_expected.to eq 'chael.codes' }
+    end
+
+    context 'with base url' do
+      let(:url) { "https://chael.codes/base" }
+
+      it { is_expected.to eq 'chael.codes' }
+    end
+  end
+
   describe '.parse_twitch_url' do
     subject { Jekyll::TwitchTag.parse_twitch_url(url) }
 
@@ -18,7 +46,7 @@ RSpec.describe Jekyll::TwitchTag do
   describe '#render' do
     subject { Jekyll::TwitchTag }
     before do
-      allow(Jekyll::TwitchTag).to receive(:site_host).and_return("test")
+      allow(Jekyll::TwitchTag).to receive(:site_url).and_return("test")
     end
 
     it "renders a twitch embed" do
