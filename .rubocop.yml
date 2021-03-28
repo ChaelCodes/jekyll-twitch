@@ -1,0 +1,24 @@
+# Hey maintainer!
+# Don't forget you can exclude individual examples using
+# rubocop:disable RSpec/ExampleLength
+# You're smarter than the machine!
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+require:
+  - rubocop-rspec
+
+Metrics/BlockLength:
+  Exclude: 
+    - 'spec/**/*'
+
+Naming/FileName:
+  Exclude:
+    - 'lib/jekyll-twitch.rb'
+
+RSpec/ImplicitSubject:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
