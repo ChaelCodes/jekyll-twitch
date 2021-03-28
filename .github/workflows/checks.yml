@@ -1,0 +1,25 @@
+name: Check Code
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2
+    - run: bundle install
+    - name: Rubocop
+      run: bundle exec rubocop
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2
+    - run: bundle install
+    - name: RSpec
+      run: bundle exec rspec
