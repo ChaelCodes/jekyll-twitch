@@ -1,6 +1,11 @@
-require "jekyll"
+# frozen_string_literal: true
 
+require 'jekyll'
+
+# These are all for Jekyll.
 module Jekyll
+  # This is a liquid tag that embed Twitch Clips
+  # input is a url
   class TwitchTag < Liquid::Tag
     def initialize(_tag_name, content, _tokens)
       super
@@ -9,7 +14,7 @@ module Jekyll
 
     def render(context)
       host = Jekyll::TwitchTag.site_url context
-      %Q(<iframe
+      %(<iframe
         src="#{@parsed_url}&parent=#{host}"
         height="720"
         width="1280"
@@ -19,7 +24,7 @@ module Jekyll
 
     # Class Methods
     def self.hostname(url)
-      matches = url.match %r{\A(https?://)?(?<host>[A-z.]+)(:\d+)?}
+      matches = url.match %r{\A(?<safe>https?://)?(?<host>[A-z.]+)(?<port>:\d+)?}
       matches[:host]
     end
 
@@ -33,7 +38,7 @@ module Jekyll
     end
 
     def self.site_url(context)
-      self.hostname(context.registers[:site].config['url'])
+      hostname(context.registers[:site].config['url'])
     end
   end
 
