@@ -33,6 +33,11 @@ module Jekyll
       "https://clips.twitch.tv/embed?autoplay=false&clip=#{slug[:clip]}"
     end
 
+    def self.collection_url(url)
+      slug = url.match %r{(?<no>/collections/)(?<collection>.+)/?\??}
+      "https://player.twitch.tv/?collection=#{slug[:collection]}&autoplay=false"
+    end
+
     def self.hostname(url)
       matches = url.match %r{\A(?<safe>https?://)?(?<host>[A-z.]+)(?<port>:\d+)?}
       matches[:host]
@@ -45,6 +50,8 @@ module Jekyll
         clip_url url
       when %r{/videos/}
         video_url url
+      when %r{/collections/}
+        collection_url url
       else
         channel_url url
       end

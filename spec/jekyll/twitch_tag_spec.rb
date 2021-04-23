@@ -54,6 +54,14 @@ RSpec.describe Jekyll::TwitchTag do
       }
     end
 
+    context 'with collection url' do
+      let(:url) { 'https://www.twitch.tv/collections/x5bG2TGTeBYIRg' }
+
+      it {
+        is_expected.to eq 'https://player.twitch.tv/?collection=x5bG2TGTeBYIRg&autoplay=false'
+      }
+    end
+
     context 'with vod url' do
       let(:url) { 'https://www.twitch.tv/videos/716698136' }
 
@@ -103,6 +111,25 @@ RSpec.describe Jekyll::TwitchTag do
       # rubocop:disable Layout/IndentationWidth
       %(<iframe
         src="https://player.twitch.tv/?channel=ChaelCodes&autoplay=false&parent=test"
+        height="100%"
+        width="100%"
+        allowfullscreen="true">
+      </iframe>)
+        # rubocop:enable Layout/IndentationWidth
+      end
+
+      it 'renders a twitch embed' do
+        liquid = tag.render
+        expect(liquid).to eq result
+      end
+    end
+
+    context 'with collection' do
+      let(:tag) { Liquid::Template.parse('{% twitch https://www.twitch.tv/collections/x5bG2TGTeBYIRg %}') }
+      let(:result) do
+      # rubocop:disable Layout/IndentationWidth
+      %(<iframe
+        src="https://player.twitch.tv/?collection=x5bG2TGTeBYIRg&autoplay=false&parent=test"
         height="100%"
         width="100%"
         allowfullscreen="true">
