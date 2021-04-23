@@ -9,7 +9,7 @@ module Jekyll
   class TwitchTag < Liquid::Tag
     def initialize(_tag_name, content, _tokens)
       super
-      @parsed_url = Jekyll::TwitchTag.parse_twitch_url content
+      @parsed_url = Jekyll::TwitchTag.parse_twitch_url content.strip
     end
 
     def render(context)
@@ -44,7 +44,6 @@ module Jekyll
     end
 
     def self.parse_twitch_url(url)
-      url = url.strip
       case url
       when %r{/clip/}
         clip_url url
