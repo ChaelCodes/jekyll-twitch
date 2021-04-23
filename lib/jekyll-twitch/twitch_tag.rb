@@ -34,6 +34,9 @@ module Jekyll
       when %r{/clip/}
         slug = url.match %r{(?<no>/clip/)(?<clip>.+)}
         "https://clips.twitch.tv/embed?autoplay=false&clip=#{slug[:clip]}"
+      else
+        slug = url.match %r{(?<no>twitch.tv/)(?<channel>.+)/?}
+        "https://player.twitch.tv/?channel=#{slug[:channel]}&autoplay=false"
       end
     end
 
