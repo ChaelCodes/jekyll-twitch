@@ -16,8 +16,8 @@ module Jekyll
       host = Jekyll::TwitchTag.site_url context
       %(<iframe
         src="#{@parsed_url}&parent=#{host}"
-        height="720"
-        width="1280"
+        height="100%"
+        width="100%"
         allowfullscreen="true">
       </iframe>)
     end

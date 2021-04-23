@@ -61,8 +61,8 @@ RSpec.describe Jekyll::TwitchTag do # rubocop:disable Metrics/BlockLength
       expect(liquid).to eq(
         %(<iframe
         src="https://clips.twitch.tv/embed?autoplay=false&clip=LongClipName-uuid1234&parent=test"
-        height="720"
-        width="1280"
+        height="100%"
+        width="100%"
         allowfullscreen="true">
       </iframe>)
       ) # https://player.twitch.tv/?
