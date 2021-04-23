@@ -26,6 +26,7 @@ gem 'listen', github: 'guard/listen'
 group :jekyll_plugins do
   # remove github later, issues with rubygems
   gem 'jekyll-feed', github: 'jekyll/jekyll-feed'
+  gem 'jekyll-twitch', github: 'ChaelCodes/jekyll-twitch', branch: 'main'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

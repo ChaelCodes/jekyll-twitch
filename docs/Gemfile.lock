@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/ChaelCodes/jekyll-twitch.git
+  revision: bba5a0c52521ee3bd64fd75d6fc19605aaa88a63
+  branch: main
+  specs:
+    jekyll-twitch (0.2.0)
+      jekyll
+
+GIT
   remote: https://github.com/guard/listen.git
   revision: 96c9476af3ab383c150e7f533718a2b37d1ede66
   specs:
@@ -97,6 +105,7 @@ DEPENDENCIES
   i18n!
   jekyll (~> 4.2.0)
   jekyll-feed!
+  jekyll-twitch!
   listen!
   minima!
   rexml!
