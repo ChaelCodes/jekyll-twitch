@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/ChaelCodes/jekyll-twitch.git
-  revision: bba5a0c52521ee3bd64fd75d6fc19605aaa88a63
+  revision: 88757581284a7e8432ebf26d5fdbe325a02a2698
   branch: main
   specs:
-    jekyll-twitch (0.2.0)
+    jekyll-twitch (1.0.0)
       jekyll
 
 GIT
