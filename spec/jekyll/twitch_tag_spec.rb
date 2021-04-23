@@ -2,7 +2,7 @@
 
 require 'pry'
 
-RSpec.describe Jekyll::TwitchTag do
+RSpec.describe Jekyll::TwitchTag do # rubocop:disable Metrics/BlockLength
   it 'has a version number' do
     expect(Jekyll::Twitch::VERSION).not_to be nil
   end

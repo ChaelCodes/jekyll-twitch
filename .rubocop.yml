@@ -9,14 +9,6 @@ AllCops:
 require:
   - rubocop-rspec
 
-Metrics/BlockLength:
-  Exclude: 
-    - 'spec/**/*'
-
-Naming/FileName:
-  Exclude:
-    - 'lib/jekyll-twitch.rb'
-
 RSpec/ImplicitSubject:
   Enabled: false
 
