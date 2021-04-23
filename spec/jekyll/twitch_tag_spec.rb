@@ -2,7 +2,7 @@
 
 require 'pry'
 
-RSpec.describe Jekyll::TwitchTag do # rubocop:disable Metrics/BlockLength
+RSpec.describe Jekyll::TwitchTag do
   it 'has a version number' do
     expect(Jekyll::Twitch::VERSION).not_to be nil
   end
@@ -45,6 +45,38 @@ RSpec.describe Jekyll::TwitchTag do # rubocop:disable Metrics/BlockLength
         is_expected.to eq 'https://clips.twitch.tv/embed?autoplay=false&clip=LongClipName-uuid1234'
       }
     end
+
+    context 'with channel url' do
+      let(:url) { 'https://twitch.tv/ChaelCodes' }
+
+      it {
+        is_expected.to eq 'https://player.twitch.tv/?channel=ChaelCodes&autoplay=false'
+      }
+    end
+
+    context 'with collection url' do
+      let(:url) { 'https://www.twitch.tv/collections/x5bG2TGTeBYIRg' }
+
+      it {
+        is_expected.to eq 'https://player.twitch.tv/?collection=x5bG2TGTeBYIRg&autoplay=false'
+      }
+    end
+
+    context 'with vod url' do
+      let(:url) { 'https://www.twitch.tv/videos/716698136' }
+
+      it {
+        is_expected.to eq 'https://player.twitch.tv/?video=716698136&autoplay=false'
+      }
+
+      context 'with messy url' do
+        let(:url) { 'https://www.twitch.tv/videos/716698136?filter=highlights&sort=views' }
+
+        it {
+          is_expected.to eq 'https://player.twitch.tv/?video=716698136&autoplay=false'
+        }
+      end
+    end
   end
 
   describe '#render' do
@@ -54,18 +86,80 @@ RSpec.describe Jekyll::TwitchTag do # rubocop:disable Metrics/BlockLength
       allow(described_class).to receive(:site_url).and_return('test')
     end
 
-    let(:tag) { Liquid::Template.parse('{% twitch https://www.twitch.tv/chaelcodes/clip/LongClipName-uuid1234 %}') }
-
-    it 'renders a twitch embed' do # rubocop:disable RSpec/ExampleLength
-      liquid = tag.render
-      expect(liquid).to eq(
-        %(<iframe
+    context 'with clip' do
+      let(:tag) { Liquid::Template.parse('{% twitch https://www.twitch.tv/chaelcodes/clip/LongClipName-uuid1234 %}') }
+      let(:result) do
+      # rubocop:disable Layout/IndentationWidth
+      %(<iframe
         src="https://clips.twitch.tv/embed?autoplay=false&clip=LongClipName-uuid1234&parent=test"
-        height="720"
-        width="1280"
+        height="100%"
+        width="100%"
         allowfullscreen="true">
       </iframe>)
-      ) # https://player.twitch.tv/?
+        # rubocop:enable Layout/IndentationWidth
+      end
+
+      it 'renders a twitch embed' do
+        liquid = tag.render
+        expect(liquid).to eq result
+      end
+    end
+
+    context 'with channel' do
+      let(:tag) { Liquid::Template.parse('{% twitch https://twitch.tv/ChaelCodes %}') }
+      let(:result) do
+      # rubocop:disable Layout/IndentationWidth
+      %(<iframe
+        src="https://player.twitch.tv/?channel=ChaelCodes&autoplay=false&parent=test"
+        height="100%"
+        width="100%"
+        allowfullscreen="true">
+      </iframe>)
+        # rubocop:enable Layout/IndentationWidth
+      end
+
+      it 'renders a twitch embed' do
+        liquid = tag.render
+        expect(liquid).to eq result
+      end
+    end
+
+    context 'with collection' do
+      let(:tag) { Liquid::Template.parse('{% twitch https://www.twitch.tv/collections/x5bG2TGTeBYIRg %}') }
+      let(:result) do
+      # rubocop:disable Layout/IndentationWidth
+      %(<iframe
+        src="https://player.twitch.tv/?collection=x5bG2TGTeBYIRg&autoplay=false&parent=test"
+        height="100%"
+        width="100%"
+        allowfullscreen="true">
+      </iframe>)
+        # rubocop:enable Layout/IndentationWidth
+      end
+
+      it 'renders a twitch embed' do
+        liquid = tag.render
+        expect(liquid).to eq result
+      end
+    end
+
+    context 'with VoD' do
+      let(:tag) { Liquid::Template.parse('{% twitch https://www.twitch.tv/videos/716698136 %}') }
+      let(:result) do
+      # rubocop:disable Layout/IndentationWidth
+      %(<iframe
+        src="https://player.twitch.tv/?video=716698136&autoplay=false&parent=test"
+        height="100%"
+        width="100%"
+        allowfullscreen="true">
+      </iframe>)
+        # rubocop:enable Layout/IndentationWidth
+      end
+
+      it 'renders a twitch embed' do
+        liquid = tag.render
+        expect(liquid).to eq result
+      end
     end
   end
 
