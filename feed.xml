@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://www.chael.codes/jekyll-twitch/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.chael.codes/jekyll-twitch/" rel="alternate" type="text/html" /><updated>2021-04-23T20:35:51+00:00</updated><id>https://www.chael.codes/jekyll-twitch/feed.xml</id><title type="html">Jekyll-Twitch Demo</title><subtitle>You can use Jekyll-Twitch to embed Twitch clips in your Jekyll Site.</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">Version 1 Released</title><link href="https://www.chael.codes/jekyll-twitch/2021/04/23/Version-1-Released.html" rel="alternate" type="text/html" title="Version 1 Released" /><published>2021-04-23T00:00:00+00:00</published><updated>2021-04-23T00:00:00+00:00</updated><id>https://www.chael.codes/jekyll-twitch/2021/04/23/Version-1-Released</id><content type="html" xml:base="https://www.chael.codes/jekyll-twitch/2021/04/23/Version-1-Released.html">&lt;p&gt;Version 1.0 of Jekyll-Twitch has just been released!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;embed now sizes to the parent div instead of being a fixed 1280x720
+    &lt;ul&gt;
+      &lt;li&gt;See the example pages on the documentation site for more details&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Supports clips, channels, collections, and vods&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html">Version 1.0 of Jekyll-Twitch has just been released!</summary></entry></feed>
