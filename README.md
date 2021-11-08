@@ -4,6 +4,9 @@ This gem allows you to embed twitch clips in your Jekyll websites. It adds and r
 
 `{% twitch https://www.twitch.tv/chaelcodes/clip/SpoopySlipperyGrasshopperPogChamp %}`
 
+## [See the DEMO site](https://www.chael.codes/jekyll-twitch/)
+Check out the [demo site](https://www.chael.codes/jekyll-twitch/) for install instructions and to review different embed examples.
+
 ## Installation
 
 Add this line to your application's Gemfile:
