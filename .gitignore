@@ -7,5 +7,8 @@
 /spec/reports/
 /tmp/
 
+# Jekyll Stuff
+.jekyll-cache
+
 # rspec failure tracking
 .rspec_status
