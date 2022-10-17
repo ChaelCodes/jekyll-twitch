@@ -11,6 +11,8 @@ source 'https://rubygems.org'
 # Happy Jekylling!
 gem 'jekyll', '~> 4.2.0'
 
+gem 'webrick' # See https://github.com/jekyll/jekyll/issues/8523 this is a Ruby 3/Jekyll thing
+
 # there were issues with rubygems - remove these later
 gem 'i18n', github: 'ruby-i18n/i18n'
 gem 'rexml', github: 'ruby/rexml'
