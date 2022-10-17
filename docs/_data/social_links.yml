@@ -1,0 +1,12 @@
+- name: Jekyll-Twitch
+  network: GitHub
+  url: https://github.com/ChaelCodes/Jekyll-Twitch
+  icon: /assets/minima-social-icons.svg#github
+- name: ChaelCodes
+  network: Twitter
+  icon: /assets/minima-social-icons.svg#twitter
+  url: https://twitter.com/ChaelCodes
+- name: Creating Jekyll-Twitch
+  network: Dev.To
+  icon: /assets/minima-social-icons.svg#devto
+  url: https://dev.to/newrelic/building-jekyll-twitch-the-gem-1kca

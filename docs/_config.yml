@@ -20,15 +20,22 @@
 
 title: Jekyll-Twitch Demo
 email: chaelcodes@gmail.com
+author:
+  name: Rachael Wright-Munn
+  email: chaelcodes@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  You can use Jekyll-Twitch to embed Twitch clips in your Jekyll Site.
+  You can use Jekyll-Twitch to embed Twitch broadcasts, clips, and videos in your Jekyll Site.
 baseurl: "/jekyll-twitch" # the subpath of your site, e.g. /blog
 url: "https://www.chael.codes" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ChaelCodes
 github_username:  ChaelCodes
 
-# Build settings
+# Theme
 theme: minima
+minima:
+  skin: auto
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-twitch

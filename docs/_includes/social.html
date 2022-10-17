@@ -1,0 +1,9 @@
+<ul class="social-media-list">
+  {% for social in site.data.social_links %}
+    <li>
+      <a rel="me" href="{{social.url}}" target="_blank" title="{{social.name}}">
+        <svg class="svg-icon grey"><use xlink:href="{{ social.icon | relative_url }}"></use></svg>
+      </a>
+    </li>    
+  {% endfor %}
+</ul>
