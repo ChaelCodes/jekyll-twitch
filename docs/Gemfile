@@ -11,21 +11,15 @@ source 'https://rubygems.org'
 # Happy Jekylling!
 gem 'jekyll', '~> 4.2.0'
 
-# there were issues with rubygems - remove these later
-gem 'i18n', github: 'ruby-i18n/i18n'
-gem 'rexml', github: 'ruby/rexml'
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem 'minima', github: 'jekyll/minima'
-
-# there were issues with rubygems - remove these later
-gem 'listen', github: 'guard/listen'
+gem 'minima'
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # remove github later, issues with rubygems
-  gem 'jekyll-feed', github: 'jekyll/jekyll-feed'
+  gem 'jekyll-feed'
   gem 'jekyll-twitch', github: 'ChaelCodes/jekyll-twitch', branch: 'main'
 end
 
