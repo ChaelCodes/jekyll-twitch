@@ -1,6 +1,6 @@
 # Jekyll::Twitch
 
-This gem allows you to embed twitch clips in your Jekyll websites. It adds and registers a new twitch liquid tag that accepts a twitch clip url.
+This gem allows you to embed twitch clips in your Jekyll websites. It adds and registers a new twitch liquid tag that accepts a twitch clip, channel, broadcast, or highlight url.
 
 `{% twitch https://www.twitch.tv/chaelcodes/clip/SpoopySlipperyGrasshopperPogChamp %}`
 
@@ -31,22 +31,16 @@ plugins:
 
 ## Usage
 
+This is a Jekyll liquid tag, so just put `{% twitch  https://www.twitch.tv/chaelcodes/clip/SpoopySlipperyGrasshopperPogChamp %}` to embed your clip, channel, or broadcast.
+
 When building your site, Jekyll no longer substitutes `site.url` for localhost, which means Twitch embeds will not render. You need to supply host and localhost to view clips in development. `jekyll serve --host localhost --port 4000`
 
-This is a Jekyll liquid tag, so just put `{% twitch  https://www.twitch.tv/chaelcodes/clip/SpoopySlipperyGrasshopperPogChamp %}` to embed your clip.
-
-We intend to support broadcasts and videos soon.
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+All of the below examples are on the demo site with actual embeds. I strongly recommend using that.
 
 ## Contributing
-
 Bug reports and pull requests are welcome on GitHub at https://github.com/ChaelCodes/jekyll-twitch. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/ChaelCodes/jekyll-twitch/blob/main/CODE_OF_CONDUCT.md).
 
+For more details on setting up the local environment, demo site, and releasing a new version, see our [CONTRIBUTING.md](/CONTRIBUTING.md).
 
 ## License
 
