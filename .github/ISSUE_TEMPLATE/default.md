@@ -1,7 +1,7 @@
 ## Description
 
 <!--
-Please provide a detailed description of how the issue. 
+Please provide a detailed description of how to reproduce the issue. 
 
 *Note whether this is an existing bug or a feature request and consider the following:*
 
