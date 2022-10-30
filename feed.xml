@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.chael.codes/jekyll-twitch/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.chael.codes/jekyll-twitch/" rel="alternate" type="text/html" /><updated>2022-10-30T20:27:12+00:00</updated><id>https://www.chael.codes/jekyll-twitch/feed.xml</id><title type="html">Jekyll-Twitch Demo</title><subtitle>You can use Jekyll-Twitch to embed Twitch broadcasts, clips, and videos in your Jekyll Site.</subtitle><author><name>Rachael Wright-Munn</name><email>chaelcodes@gmail.com</email></author><entry><title type="html">Version 1.0.1 Released</title><link href="https://www.chael.codes/jekyll-twitch/2022/10/17/Version-1.0.1-Released.html" rel="alternate" type="text/html" title="Version 1.0.1 Released" /><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><id>https://www.chael.codes/jekyll-twitch/2022/10/17/Version-1.0.1-Released</id><content type="html" xml:base="https://www.chael.codes/jekyll-twitch/2022/10/17/Version-1.0.1-Released.html"><![CDATA[<p>It’s been a while since the last release. Jekyll-Twitch is feature complete in my eyes, unless folks start asking for the interactive embeds or custom sizes in the embed. This release just includes security fixes from the last year.</p>
+
+<h1 id="changes">Changes</h1>
+<ul>
+  <li><a href="https://github.com/ChaelCodes/jekyll-twitch/pull/16">#16</a> Bump rexml from 3.2.4 to 3.2.5</li>
+  <li><a href="https://github.com/ChaelCodes/jekyll-twitch/pull/17">#17</a> Bump addressable from 2.7.0 to 2.8.1</li>
+</ul>]]></content><author><name>Rachael Wright-Munn</name><email>chaelcodes@gmail.com</email></author><summary type="html"><![CDATA[It’s been a while since the last release. Jekyll-Twitch is feature complete in my eyes, unless folks start asking for the interactive embeds or custom sizes in the embed. This release just includes security fixes from the last year.]]></summary></entry><entry><title type="html">Version 1 Released</title><link href="https://www.chael.codes/jekyll-twitch/2021/04/23/Version-1-Released.html" rel="alternate" type="text/html" title="Version 1 Released" /><published>2021-04-23T00:00:00+00:00</published><updated>2021-04-23T00:00:00+00:00</updated><id>https://www.chael.codes/jekyll-twitch/2021/04/23/Version-1-Released</id><content type="html" xml:base="https://www.chael.codes/jekyll-twitch/2021/04/23/Version-1-Released.html"><![CDATA[<p>Version 1.0 of Jekyll-Twitch has just been released!</p>
+
+<ul>
+  <li>embed now sizes to the parent div instead of being a fixed 1280x720
+    <ul>
+      <li>See the example pages on the documentation site for more details</li>
+    </ul>
+  </li>
+  <li>Supports clips, channels, collections, and vods</li>
+</ul>]]></content><author><name>Rachael Wright-Munn</name><email>chaelcodes@gmail.com</email></author><summary type="html"><![CDATA[Version 1.0 of Jekyll-Twitch has just been released!]]></summary></entry></feed>
